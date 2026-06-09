@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
-export default function Carousel() {
+export default function Carousel(): null {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [startX, setStartX] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -20,16 +20,16 @@ export default function Carousel() {
     }, 5000);
 
     // Mouse/Touch drag events
-    const handleDragStart = (e) => {
+    const handleDragStart = (e: MouseEvent | TouchEvent) => {
       setIsDragging(true);
-      setStartX(e.type.includes('mouse') ? e.clientX : e.touches[0].clientX);
+      setStartX((e as any).type.includes('mouse') ? (e as MouseEvent).clientX : (e as TouchEvent).touches[0].clientX);
     };
 
-    const handleDragEnd = (e) => {
+    const handleDragEnd = (e: MouseEvent | TouchEvent) => {
       if (!isDragging) return;
       setIsDragging(false);
       
-      const endX = e.type.includes('mouse') ? e.clientX : e.changedTouches[0].clientX;
+      const endX = (e as any).type.includes('mouse') ? (e as MouseEvent).clientX : (e as TouchEvent).changedTouches[0].clientX;
       const diff = startX - endX;
 
       if (Math.abs(diff) > 50) {
