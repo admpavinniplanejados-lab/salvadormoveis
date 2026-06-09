@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startAutoplay();
     updateCarouselHeight();
-    window.addEventListener('resize', updateCarouselHeight);
+    window.addEventListener('resize', () => updateCarouselHeight());
 
     // ========================================
     // 2. MOBILE MENU
