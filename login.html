@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Salvador Móveis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-promo-bar"><div class="container top-promo-bar-inner"><div class="promo-item">Entrega rápida</div><div class="promo-item">Pagamento na entrega</div><div class="promo-item">Retire Rápido</div></div></div>
+
+    <header class="header" id="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Salvador Móveis Logo" class="logo-img"></a>
+            <div class="header-actions">
+                <a href="produto.html" class="header-action">Produtos</a>
+                <a href="rastreamento.html" class="header-action">Rastreio</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <div class="container login-grid">
+            <section class="page-card">
+                <span class="page-chip">Área do cliente</span>
+                <h1>Entre na sua conta e acompanhe pedidos, favoritos e promoções.</h1>
+                <p>Esta tela substitui o acesso genérico por uma experiência mais clara para o cliente, com início de sessão e navegação para rastreamento.</p>
+                <div class="page-grid">
+                    <article class="mini-card"><strong>Pedidos</strong><span>Consulte status, entrega e histórico de compras.</span></article>
+                    <article class="mini-card"><strong>Favoritos</strong><span>Salve suas peças preferidas para comprar depois.</span></article>
+                    <article class="mini-card"><strong>Promoções</strong><span>Receba ofertas exclusivas e descontos para clientes cadastrados.</span></article>
+                    <article class="mini-card"><strong>Suporte</strong><span>Fale com a equipe por WhatsApp em poucos cliques.</span></article>
+                </div>
+            </section>
+            <section class="page-card form-card">
+                <h2>Fazer login</h2>
+                <label>E-mail
+                    <input type="email" placeholder="seu@email.com" />
+                </label>
+                <label>Senha
+                    <input type="password" placeholder="********" />
+                </label>
+                <label>Tipo de conta
+                    <select>
+                        <option>Cliente</option>
+                        <option>Revendedor</option>
+                    </select>
+                </label>
+                <button class="primary" type="button">Entrar</button>
+                <p style="font-size:12px;color:var(--n-600);">Ainda não tem conta? <a href="https://api.whatsapp.com/send?phone=557191770157" target="_blank" rel="noopener noreferrer" style="color:var(--brand-600);font-weight:700;">Fale com a loja</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo"><img src="assets/logo.png" alt="Salvador Móveis Logo" class="footer-logo-img"></a>
+                <p class="footer-desc">Salvador Móveis LTDA · Rua Cristiano Buys, 122 f - Loja Horto Bela Vista · Salvador/BA.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Atendimento</h4>
+                <p class="footer-phone"><a href="https://api.whatsapp.com/send?phone=557191770157" target="_blank" rel="noopener noreferrer">(71) 9177-0157</a></p>
+                <p class="footer-email"><a href="mailto:salvadormoveisbahia@gmail.com">salvadormoveisbahia@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="rastreamento.html">Rastrear pedido</a></li>
+                    <li><a href="login.html">Minha conta</a></li>
+                    <li><a href="produto.html">Ver produtos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Formas de Pagamento</h4>
+                <div class="payment-icons"><span class="pay-icon">📱 PIX</span><span class="pay-icon">💳 VISA</span><span class="pay-icon">💳 MASTER</span><span class="pay-icon">🧾 BOLETO</span></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="container"><p>© 2026 Salvador Móveis LTDA – CNPJ: 26.282.573/0001-49 – Salvador/BA</p></div></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

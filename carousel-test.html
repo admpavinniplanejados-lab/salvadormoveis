@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Responsiveness Test</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #f5f5f5; }
+        .test-container { max-width: 1300px; margin: 20px auto; }
+        .device-test { background: white; margin: 20px 0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .device-label { background: #004791; color: white; padding: 10px 15px; font-weight: bold; }
+        .carousel-preview { width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, #004791 0%, #0084ff 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold; }
+        .device-desktop { width: 100%; }
+        .device-tablet { width: 768px; margin: 0 auto; }
+        .device-mobile { width: 375px; margin: 0 auto; }
+        .device-small { width: 360px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #004791; margin: 20px 0;">📱 Carousel Responsiveness Test</h1>
+    
+    <div class="test-container">
+        <div class="device-test">
+            <div class="device-label">💻 Desktop (1920px)</div>
+            <div class="device-desktop carousel-preview">16:9 Aspect Ratio - Dynamic Height</div>
+        </div>
+        
+        <div class="device-test">
+            <div class="device-label">📲 Tablet (768px)</div>
+            <div class="device-tablet carousel-preview">16:9 Aspect Ratio</div>
+        </div>
+        
+        <div class="device-test">
+            <div class="device-label">📱 Mobile (375px)</div>
+            <div class="device-mobile carousel-preview">16:9 Aspect Ratio</div>
+        </div>
+        
+        <div class="device-test">
+            <div class="device-label">📱 Small Mobile (360px)</div>
+            <div class="device-small carousel-preview">16:9 Aspect Ratio</div>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin: 40px 0; padding: 20px; background: white; border-radius: 8px; max-width: 1300px; margin-left: auto; margin-right: auto;">
+        <h2 style="color: #004791; margin-bottom: 10px;">✅ Changes Applied</h2>
+        <ul style="list-style: none; text-align: left; display: inline-block;">
+            <li>✅ Removed fixed heights (400px desktop, 220px mobile)</li>
+            <li>✅ Added aspect-ratio: 16/9 for consistent proportions</li>
+            <li>✅ Changed object-fit from contain to cover</li>
+            <li>✅ Height is now auto (responsive to container)</li>
+            <li>✅ Carousel will never be cut off</li>
+        </ul>
+    </div>
+</body>
+</html>

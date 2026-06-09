@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento | Salvador Móveis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-promo-bar"><div class="container top-promo-bar-inner"><div class="promo-item">Entrega rápida</div><div class="promo-item">Pagamento na entrega</div><div class="promo-item">Retire Rápido</div></div></div>
+
+    <header class="header" id="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="Salvador Móveis Logo" class="logo-img"></a>
+            <div class="header-actions">
+                <a href="produto.html" class="header-action">Produtos</a>
+                <a href="login.html" class="header-action">Minha conta</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <div class="container page-hero">
+            <section class="page-card track-card">
+                <span class="page-chip">Rastreamento do pedido</span>
+                <h1>Acompanhe o status do seu pedido em tempo real.</h1>
+                <p>Informe o código do pedido para ver onde está a entrega e confirmar o próximo passo da operação.</p>
+                <label class="form-card" style="gap:8px;">
+                    <span style="font-size:13px;font-weight:700;color:var(--n-700);">Código do pedido</span>
+                    <input type="text" placeholder="Ex.: SM-2026-1048" />
+                </label>
+                <div class="page-actions"><button class="primary" type="button">Consultar status</button><a class="secondary" href="https://api.whatsapp.com/send?phone=557191770157" target="_blank" rel="noopener noreferrer">Falar com suporte</a></div>
+            </section>
+            <aside class="page-card">
+                <h2>Último status</h2>
+                <div class="track-result">
+                    <strong>Pedido SM-2026-1048</strong>
+                    <span>Em transporte para Salvador · previsão de entrega hoje até 18h.</span>
+                </div>
+                <div class="track-list">
+                    <div><span>1.</span> Pedido confirmado</div>
+                    <div><span>2.</span> Produto separado na loja</div>
+                    <div><span>3.</span> Em rota de entrega</div>
+                    <div><span>4.</span> Entregue / confirmada</div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo"><img src="assets/logo.png" alt="Salvador Móveis Logo" class="footer-logo-img"></a>
+                <p class="footer-desc">Salvador Móveis LTDA · Rua Cristiano Buys, 122 f - Loja Horto Bela Vista · Salvador/BA.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Atendimento</h4>
+                <p class="footer-phone"><a href="https://api.whatsapp.com/send?phone=557191770157" target="_blank" rel="noopener noreferrer">(71) 9177-0157</a></p>
+                <p class="footer-email"><a href="mailto:salvadormoveisbahia@gmail.com">salvadormoveisbahia@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="rastreamento.html">Rastrear pedido</a></li>
+                    <li><a href="login.html">Minha conta</a></li>
+                    <li><a href="produto.html">Ver produtos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Formas de Pagamento</h4>
+                <div class="payment-icons"><span class="pay-icon">📱 PIX</span><span class="pay-icon">💳 VISA</span><span class="pay-icon">💳 MASTER</span><span class="pay-icon">🧾 BOLETO</span></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="container"><p>© 2026 Salvador Móveis LTDA – CNPJ: 26.282.573/0001-49 – Salvador/BA</p></div></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
