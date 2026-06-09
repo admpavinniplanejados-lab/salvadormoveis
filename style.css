@@ -390,8 +390,8 @@ img{max-width:100%;height:auto;display:block;}
 /* =============================================
    BANNER CAROUSEL
    ============================================= */
-.banner-carousel{position:relative;width:100%;overflow:visible;background:transparent;margin-bottom:0;z-index:1;}
-.carousel-track{position:relative;width:100%;height:auto;min-height:300px;padding:0;margin:0;display:block;}
+.banner-carousel{position:relative;width:100%;overflow:hidden;background:transparent;margin-bottom:0;z-index:1;}
+.carousel-track{position:relative;width:100%;height:auto;min-height:500px;padding:0;margin:0;display:block;}
 .carousel-slide{
     position:absolute;top:0;left:0;width:100%;height:auto;
     opacity:0;transition:opacity .9s var(--ease);
