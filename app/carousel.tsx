@@ -1,11 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Carousel(): null {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [startX, setStartX] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
+  const startXRef = useRef(0);
+  const isDraggingRef = useRef(false);
+  const slidesRef = useRef<NodeListOf<Element> | null>(null);
+  const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
     const track = document.getElementById('carousel-track');
@@ -14,57 +16,68 @@ export default function Carousel(): null {
     const slides = document.querySelectorAll('.carousel-slide');
     if (slides.length === 0) return;
 
-    // Auto-rotate interval
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    slidesRef.current = slides;
 
-    // Mouse/Touch drag events
     const handleDragStart = (e: MouseEvent | TouchEvent) => {
-      setIsDragging(true);
-      setStartX((e as any).type.includes('mouse') ? (e as MouseEvent).clientX : (e as TouchEvent).touches[0].clientX);
+      isDraggingRef.current = true;
+      startXRef.current = (e as any).type.includes('mouse')
+        ? (e as MouseEvent).clientX
+        : (e as TouchEvent).touches[0].clientX;
     };
 
     const handleDragEnd = (e: MouseEvent | TouchEvent) => {
-      if (!isDragging) return;
-      setIsDragging(false);
-      
-      const endX = (e as any).type.includes('mouse') ? (e as MouseEvent).clientX : (e as TouchEvent).changedTouches[0].clientX;
-      const diff = startX - endX;
+      if (!isDraggingRef.current) return;
+      isDraggingRef.current = false;
+
+      const endX = (e as any).type.includes('mouse')
+        ? (e as MouseEvent).clientX
+        : (e as TouchEvent).changedTouches[0].clientX;
+      const diff = startXRef.current - endX;
 
       if (Math.abs(diff) > 50) {
-        if (diff > 0) {
-          // Dragged left, go to next slide
-          setCurrentSlide((prev) => (prev + 1) % slides.length);
-        } else {
-          // Dragged right, go to previous slide
-          setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-        }
+        setCurrentSlide((prev) => {
+          return diff > 0
+            ? (prev + 1) % slides.length
+            : (prev - 1 + slides.length) % slides.length;
+        });
       }
     };
 
-    // Update active slide
-    slides.forEach((slide, index) => {
-      if (index === currentSlide) {
-        slide.classList.add('active');
-      } else {
-        slide.classList.remove('active');
+    const startAutoplay = () => {
+      if (intervalRef.current) {
+        window.clearInterval(intervalRef.current);
       }
-    });
+      intervalRef.current = window.setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }, 5000);
+    };
 
     track.addEventListener('mousedown', handleDragStart);
-    track.addEventListener('touchstart', handleDragStart);
+    track.addEventListener('touchstart', handleDragStart, { passive: true });
     document.addEventListener('mouseup', handleDragEnd);
     document.addEventListener('touchend', handleDragEnd);
 
+    startAutoplay();
+
     return () => {
-      clearInterval(interval);
+      if (intervalRef.current) {
+        window.clearInterval(intervalRef.current);
+      }
       track.removeEventListener('mousedown', handleDragStart);
       track.removeEventListener('touchstart', handleDragStart);
       document.removeEventListener('mouseup', handleDragEnd);
       document.removeEventListener('touchend', handleDragEnd);
     };
-  }, [currentSlide, startX, isDragging]);
+  }, []);
+
+  useEffect(() => {
+    const slides = slidesRef.current;
+    if (!slides) return;
+
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === currentSlide);
+    });
+  }, [currentSlide]);
 
   return null;
 }

@@ -405,7 +405,7 @@ img{max-width:100%;height:auto;display:block;}
     height:100%;
     max-height:100%;
     display:block;
-    object-fit:cover;
+    object-fit:contain;
     object-position:center;
 }
 .slide-overlay{
@@ -1178,8 +1178,14 @@ img{max-width:100%;height:auto;display:block;}
     .slide-content h2{font-size:24px;}
     .slide-content p{font-size:14px;}
     .carousel-slide img{object-fit:contain;}
-    .promo-strip-inner{flex-wrap:wrap;justify-content:center;gap:18px 12px;}
-    .promo-strip-item{min-width:180px;}
+    .promo-strip{padding:16px 0 18px;}
+    .promo-strip-inner{flex-wrap:nowrap;justify-content:flex-start;align-items:stretch;gap:12px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none;}
+    .promo-strip-inner::-webkit-scrollbar{display:none;}
+    .promo-strip-item{display:flex;flex-direction:column;justify-content:space-between;min-width:220px;flex:0 0 auto;height:100%;background:#ffffff;border-radius:16px;padding:14px 14px 14px 12px;box-shadow:0 10px 24px rgba(0,0,0,.08);align-items:flex-start;}
+    .promo-strip-icon{width:42px;height:42px;border-radius:14px;background:rgba(0,71,145,.08);}
+    .promo-strip-icon svg{width:20px;height:20px;}
+    .promo-strip-text strong{font-size:12px;}
+    .promo-strip-text span{font-size:11px;color:var(--n-500);}
     .newsletter-form{max-width:100%;}
     .footer-grid{grid-template-columns:1fr;}
     .cat-icons-grid{gap:8px;}
@@ -1206,7 +1212,7 @@ img{max-width:100%;height:auto;display:block;}
     .container{padding:0 16px;}
 }
 @media(max-width:480px){
-    .products-grid{grid-template-columns:1fr;gap:8px;}
+    .products-grid{grid-template-columns:repeat(2,1fr);gap:8px;}
     .product-img-wrap{height:150px;padding:10px;}
     .product-body{padding:10px 12px 14px;}
     .product-name{font-size:12px;}
@@ -1928,6 +1934,10 @@ img{max-width:100%;height:auto;display:block;}
     .products-grid {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+
+    @media(max-width:480px){
+        .products-grid{grid-template-columns:repeat(2,1fr);gap:12px;}
     }
 
     .product-card {
