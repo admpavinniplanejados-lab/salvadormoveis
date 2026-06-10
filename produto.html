@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto | Salvador Móveis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ======== BARRA PROMOCIONAL DO TOPO (Informações Importantes) ======== -->
+    <div class="top-promo-bar">
+        <div class="container top-promo-bar-inner">
+            <div class="promo-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect><polygon points="16 8 20 8 23 11 23 16 16 16"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                <span>Entrega 24h a 72h para Salvador, Lauro e região (Consulte Condições)</span>
+            </div>
+            <div class="promo-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                <span>Pagamento na entrega</span>
+            </div>
+            <div class="promo-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span>Retire Rápido</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======== HEADER PRINCIPAL ======== -->
+    <header class="header" id="main-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Salvador Móveis Logo" class="logo-img">
+            </a>
+
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="O que deseja procurar?">
+                <button id="search-btn" aria-label="Buscar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </button>
+            </div>
+
+            <div class="header-actions">
+                <a href="https://api.whatsapp.com/send?phone=557191770157" target="_blank" rel="noopener noreferrer" class="header-action" id="btn-atendimento">
+                    <svg class="action-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <span class="action-text">Atendimento</span>
+                </a>
+                <a href="rastreamento.html" class="header-action" id="btn-tracking">
+                    <svg class="action-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="1" y="3" width="15" height="13" rx="2" ry="2"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                    <span class="action-text">Rastrear<br>pedido</span>
+                </a>
+                <a href="login.html" class="header-action" id="btn-account">
+                    <svg class="action-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="action-text">Minha...</span>
+                </a>
+                <a href="produto.html" class="header-action cart-action" id="btn-cart">
+                    <div class="cart-icon-wrapper">
+                        <svg class="action-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-badge" id="cart-badge">0</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== NAVEGAÇÃO DE CATEGORIAS ======== -->
+    <nav class="category-nav" id="category-nav">
+        <div class="container category-nav-inner">
+            <ul class="cat-list" id="cat-list">
+                <li><a href="produto.html">SOFÁS</a></li>
+                <li><a href="produto.html">ROUPEIROS</a></li>
+                <li><a href="produto.html">MESA</a></li>
+                <li><a href="produto.html">CÔMODAS</a></li>
+                <li><a href="produto.html">COLCHÕES E CAMAS BOX</a></li>
+                <li><a href="produto.html">MAIS CATEGORIAS</a></li>
+            </ul>
+            <a href="produto.html" class="btn-offers">
+                <span class="offers-icon">
+                    <svg class="offers-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+                    </svg>
+                </span>
+                <span class="offers-text">Melhores ofertas</span>
+                <span class="offers-arrow">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <div class="container product-detail-page">
+            <nav class="product-breadcrumb" aria-label="Caminho da página">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="produto.html">Produtos</a>
+                <span>/</span>
+                <strong>Sofá Retrátil Premium</strong>
+            </nav>
+
+            <section class="product-detail-grid">
+                <article class="product-gallery-card page-card">
+                    <div class="product-main-image-wrap">
+                        <span class="product-badge sale">OFERTA</span>
+                        <img src="assets/blue_sofa.png" alt="Sofá Retrátil Premium Azul Marinho" class="product-main-image">
+                    </div>
+                    <div class="thumb-row">
+                        <button type="button" class="thumb-btn active"><img src="assets/blue_sofa.png" alt="Vista frontal"></button>
+                        <button type="button" class="thumb-btn"><img src="assets/modern_bed.png" alt="Vista lateral"></button>
+                        <button type="button" class="thumb-btn"><img src="assets/dining_table.png" alt="Detalhe do tecido"></button>
+                    </div>
+                    <div class="feature-strip">
+                        <div class="feature-pill">✔ Entrega rápida em Salvador</div>
+                        <div class="feature-pill">✔ Garantia de fabricante</div>
+                        <div class="feature-pill">✔ Consultor no WhatsApp</div>
+                    </div>
+                </article>
+
+                <aside class="product-info-card page-card">
+                    <span class="page-chip">Sofás • Mais vendido</span>
+                    <h1>Sofá Retrátil e Reclinável Premium Veludo Azul Marinho</h1>
+                    <p class="product-subtitle">Estrutura firme, tecido macio, pés de madeira e design moderno para sala e home office.</p>
+
+                    <div class="price-box">
+                        <div class="price-line old">R$ 3.899,00</div>
+                        <div class="price-line main">R$ 2.849,10</div>
+                        <div class="price-line small">no PIX • 10x de R$ 299,90 sem juros</div>
+                        <div class="price-line card">ou R$ 2.999,00 no cartão</div>
+                    </div>
+
+                    <div class="cta-row">
+                        <button class="primary btn-cart-detail" type="button">Adicionar ao carrinho</button>
+                        <a class="secondary" href="https://api.whatsapp.com/send?phone=557191770157" target="_blank" rel="noopener noreferrer">Falar com vendedor</a>
+                    </div>
+
+                    <div class="info-grid">
+                        <article class="mini-card"><strong>Entrega</strong><span>Até 72h para Salvador e região. Consulte condições para outros municípios.</span></article>
+                        <article class="mini-card"><strong>Pagamento</strong><span>PIX com desconto, cartão, boleto e pagamento na entrega.</span></article>
+                        <article class="mini-card"><strong>Loja</strong><span>Produto disponível em loja física e para retirada rápida.</span></article>
+                        <article class="mini-card"><strong>Suporte</strong><span>Atendimento humano via WhatsApp e acompanhamento do pedido.</span></article>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="detail-panels-grid">
+                <article class="page-card detail-panel">
+                    <h2>Descrição do produto</h2>
+                    <p>Modelo premium com estrutura reforçada, assento macio, almofadas removíveis e acabamento de alta resistência. Ideal para salas modernas, apartamentos e ambientes com estilo sofisticado.</p>
+                    <ul class="feature-list">
+                        <li>Medidas: 2,30m de largura</li>
+                        <li>Material: tecido veludo e estrutura em madeira</li>
+                        <li>Cor: azul marinho elegante</li>
+                        <li>Garantia: 12 meses contra defeitos de fabricação</li>
+                    </ul>
+                </article>
+
+                <article class="page-card detail-panel">
+                    <h2>Especificações</h2>
+                    <div class="spec-list">
+                        <div><span>Categoria</span><strong>Sofás</strong></div>
+                        <div><span>Modelo</span><strong>Premium 2.30m</strong></div>
+                        <div><span>Cor</span><strong>Azul Marinho</strong></div>
+                        <div><span>Material</span><strong>Tecido Veludo</strong></div>
+                        <div><span>Montagem</span><strong>Montagem simples</strong></div>
+                        <div><span>Disponibilidade</span><strong>Em estoque</strong></div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="page-card related-panel">
+                <div class="section-header">
+                    <div>
+                        <span class="page-chip">Sugestões</span>
+                        <h2>Complete sua compra com itens parecidos</h2>
+                    </div>
+                    <a href="index.html" class="btn-see-all">Voltar para a loja</a>
+                </div>
+                <div class="products-grid related-grid">
+                    <article class="product-card reveal">
+                        <div class="product-img-wrap"><img src="assets/modern_bed.png" alt="Cama Box Queen"></div>
+                        <div class="product-body"><span class="product-category">Camas</span><h3 class="product-name">Cama Box Queen com Cabeceira Estofada</h3><div class="product-pricing"><span class="price-pix">R$ 1.709,10 <small>no PIX</small></span></div></div>
+                    </article>
+                    <article class="product-card reveal">
+                        <div class="product-img-wrap"><img src="assets/dining_table.png" alt="Mesa de Jantar"></div>
+                        <div class="product-body"><span class="product-category">Mesa</span><h3 class="product-name">Conjunto Mesa de Jantar com 6 Cadeiras</h3><div class="product-pricing"><span class="price-pix">R$ 3.239,10 <small>no PIX</small></span></div></div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo"><img src="assets/logo.png" alt="Salvador Móveis Logo" class="footer-logo-img"></a>
+                <p class="footer-desc">Salvador Móveis LTDA · Rua Cristiano Buys, 122 f - Loja Horto Bela Vista · Salvador/BA.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Atendimento</h4>
+                <p class="footer-phone"><a href="https://api.whatsapp.com/send?phone=557191770157" target="_blank" rel="noopener noreferrer">(71) 9177-0157</a></p>
+                <p class="footer-email"><a href="mailto:salvadormoveisbahia@gmail.com">salvadormoveisbahia@gmail.com</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Ajuda</h4>
+                <ul>
+                    <li><a href="rastreamento.html">Rastrear Pedido</a></li>
+                    <li><a href="login.html">Minha Conta</a></li>
+                    <li><a href="produto.html">Ver Produtos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Formas de Pagamento</h4>
+                <div class="payment-icons"><span class="pay-icon">📱 PIX</span><span class="pay-icon">💳 VISA</span><span class="pay-icon">💳 MASTER</span><span class="pay-icon">🧾 BOLETO</span></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><div class="container"><p>© 2026 Salvador Móveis LTDA – CNPJ: 26.282.573/0001-49 – Salvador/BA</p></div></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

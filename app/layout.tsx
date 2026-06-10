@@ -1,4 +1,5 @@
 import './globals.css';
+import './style.css';
 
 export const metadata = {
   title: 'Salvador Móveis | E-commerce institucional',
@@ -6,18 +7,19 @@ export const metadata = {
   icons: {
     icon: '/favicon.png',
   },
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
-  themeColor: '#004791',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
     title: 'Salvador Móveis',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: '#004791',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
